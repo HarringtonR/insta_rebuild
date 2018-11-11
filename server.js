@@ -9,7 +9,7 @@ const cors = require('cors');
 const app = express();
 
 
-app.use(express.static('client/public'));
+app.use(express.static('client/build'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
