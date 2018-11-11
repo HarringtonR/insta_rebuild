@@ -1,0 +1,67 @@
+.login {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 90vh;
+  align-items: center;
+}
+
+.loginLogo {
+	margin-bottom: 2.5rem;
+	width: 50vw;
+	height: 10vh;
+}
+
+.input1{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-content: center;
+	background-color: rgba(250,250,250);
+	border-radius: .5rem;
+	padding: .8rem 1.2rem;
+	margin-bottom: 1rem;
+	width: 82vw;
+	font-size: .8rem;
+	color: rgba(209,209,209);
+	border: .08rem rgba(209,209,209) solid;
+}
+
+.input{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-content: center;
+	background-color: rgba(250,250,250);
+	border-radius: .5rem;
+	padding: .8rem 1.2rem;
+	margin: 0;
+	margin-bottom: 3rem;
+	width: 82vw;
+	font-size: .8rem;
+	color: rgba(209,209,209);
+	border: .08rem rgba(209,209,209) solid;
+}
+
+.submit {
+	background-color: rgb(155,203,247);
+	color: white;
+	width: 92vw;
+	border: none;
+	border-radius: .5rem;
+	padding: .8rem 1.2rem;
+	font-size: .8rem;
+}
+
+.createAccount {
+	background-color: rgb(155,203,247);
+	color: white;
+	width: 83vw;
+	border: none;
+	border-radius: .5rem;
+	padding: .9rem 1.2rem;
+	font-size: .8rem;
+	margin-top: 1rem;
+	text-decoration: none;
+	text-align: center;
+}

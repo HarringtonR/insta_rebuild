@@ -1,0 +1,58 @@
+.commentsList{
+  	height: 72vh;
+  	overflow: scroll;
+}
+
+.commentContainer{
+  	display: flex;
+  	padding: 1rem;
+}
+
+.commentField{
+	height: 8vh;
+	display:flex;
+	justify-content: space-between;
+	padding: .5rem 4vw;
+	position: relative;
+	border-top: .5px solid gray;
+	align-items: center;
+}
+
+.userImgComments{
+	width: 7vw;
+    height: 4vh;
+    border-radius: 2rem;
+    margin-right: .7rem;
+}
+
+.usernameComment {
+	font-family: font medium;
+	font-weight: normal;
+	margin-right: .5rem;
+}
+
+.commentBox {
+	border: none;
+	width: 80%;
+}
+
+.commenterPic {
+	width: 11vw;
+    height: 6vh;
+    border-radius: 2rem;
+    margin-right: .7rem;
+}
+
+.post {
+	color: rgb(155,203,247);
+}
+
+.commentandpost {
+	display: flex;
+	width: 80%;
+	border: .05rem gainsboro solid;
+	color: black;
+	padding: .5rem;
+	border-radius: 1rem;
+	font-size: .8rem;
+}

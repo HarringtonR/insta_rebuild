@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'font medium';
+  src: url('../font/Metropolis-Medium.otf') format('opentype');
+}
+
+.userImgProfPage {
+    width: 24vw;
+    height: auto;
+    border-radius: 3rem;
+    margin-right: .7rem;
+    margin-left: .5rem;
+}
+
+.profHead {
+	display: flex;
+	height: 13vh;
+  align-items: center;
+  justify-content: 
+}
+
+.top {
+  height: 22vh;
+  padding-top: .7rem;
+}
+
+.profilePic {
+	width: 32.8vw;
+  	height: 19vh;
+  	border-right: .05rem white solid;
+  	border-left: .05rem white solid;
+}
+
+.edit{
+  text-decoration: none;
+  text-align: center;
+  width: 60vw;
+}
+
+.editThis{
+  border: .05rem gainsboro solid;
+  color: black;
+  padding: .3rem;
+  border-radius: .2rem;
+  font-size: .8rem;
+  margin-left: 1rem;
+}
+
+.name {
+  margin-top: 1rem;
+  padding-left: .8rem;
+  font-size: .8rem;
+  font-family: font medium;
+}
+
+.bio {
+  margin-top: .2rem;
+  padding-left: .8rem;
+  font-size: .8rem
+}
+
+.viewBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gridPic {
+  background-image: url(https://res.cloudinary.com/drsaojfyp/image/upload/v1541900027/Screen_Shot_2018-11-10_at_8.25.28_PM.png);
+  background-size: contain;
+  width: 33%;
+  height: 7vh;
+}
+
+.gridPicNotUsed {
+  background-image: url(https://res.cloudinary.com/drsaojfyp/image/upload/v1541943226/Screen_Shot_2018-11-11_at_8.33.35_AM.png);
+  background-size: contain;
+  width: 33%;
+  height: 7vh;
+}
+
+.singlePic {
+  background-image: url(https://res.cloudinary.com/drsaojfyp/image/upload/v1541947671/Screen_Shot_2018-11-11_at_9.47.38_AM.png);
+  background-size: contain;
+  width: 33%;
+  height: 7vh;
+}
+
+.singlePicinUse {
+  background-image: url(https://res.cloudinary.com/drsaojfyp/image/upload/v1541943200/Screen_Shot_2018-11-11_at_8.29.54_AM.png);
+  background-size: contain;
+  width: 33%;
+  height: 7vh;
+}
+
+.tagPic {
+  background-image: url(https://res.cloudinary.com/drsaojfyp/image/upload/v1541900375/Screen_Shot_2018-11-10_at_8.39.20_PM.png);
+  background-size: contain;
+  width: 33%;
+  height: 7vh;
+}
+
+.profilePicGrid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap
+}

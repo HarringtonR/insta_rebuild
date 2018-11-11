@@ -1,0 +1,90 @@
+
+
+.navBar {
+  background-color: rgb(250,250,250);
+  height: 9vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.scroll {
+  height: 82vh;
+  overflow-y: scroll;
+}
+
+.newsFeed {
+  height: 100vh;
+}
+
+.camera {
+  height: 5vh;
+  align-self: center;
+  margin-left: .5rem;
+  padding-top: 1rem;
+}
+
+.logo {
+  width: 30vw;
+  height: 6vh;
+  align-self: center;
+  margin-left: 1.5rem;
+  padding-top: 1rem;
+}
+
+.messages {
+  width: 23vw;
+  height: 6vh;
+  align-self: center;
+  margin-right: .5rem;
+  padding-top: 1rem;
+}
+
+.footer {
+  background-color: rgb(250,250,250);
+  height: 9vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right:.5rem;
+  padding-left: .5rem;
+  top: 91vh;
+}
+
+.button {
+  height: 6vh;
+  width: 14vw;
+}
+
+.notification {
+  height: 7vh;
+}
+
+ .userProfileHome{
+  background-image: url('https://res.cloudinary.com/drsaojfyp/image/upload/v1541695314/Screen_Shot_2018-11-08_at_11.32.55_AM.png');
+  background-size: contain;
+  height: 7vh;
+  width: 14vw;
+}
+
+.notProfile{
+  background-image: url('https://res.cloudinary.com/drsaojfyp/image/upload/v1541516024/Screen_Shot_2018-11-06_at_9.47.52_AM.png');
+  background-size: contain;
+  height: 6vh;
+  width: 14vw;
+}
+
+.homeButtonHome{
+  background-image: url('https://res.cloudinary.com/drsaojfyp/image/upload/v1541695153/Screen_Shot_2018-11-08_at_11.32.19_AM.png');
+  background-size: contain;
+  height: 7vh;
+  width: 13vw;
+}
+
+.noHome{
+  background-image: url('https://res.cloudinary.com/drsaojfyp/image/upload/v1541695120/Screen_Shot_2018-11-08_at_11.32.36_AM.png');
+  background-size: contain;
+  height: 7vh;
+  width: 13vw;
+}
+
+

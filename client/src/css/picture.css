@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'font medium';
+  src: url('../font/Metropolis-Medium.otf') format('opentype');
+}
+
+.picture {
+  width: 100%;
+  height: auto;
+}
+
+.usernameCaption {
+	display: flex;
+  	flex-direction: column;
+	margin-left: .8rem;
+	font-size: .9rem;
+	margin-bottom: 1rem;
+}
+
+.this {
+	font-family: font medium;
+	font-weight: normal;
+}
+
+.photoCaption {
+	font-weight: normal;
+}
+
+.actions {
+	display: flex;
+
+}
+
+.noLike {
+	background-image: url('https://res.cloudinary.com/drsaojfyp/image/upload/v1541625973/Screen_Shot_2018-11-07_at_4.25.28_PM.png');
+	background-size: contain;
+	height: 2rem;
+	width: 2rem;
+	margin-left: .6rem;
+	margin-top: .4rem;
+	margin-bottom: .2rem;
+}
+
+.liked {
+	background-image: url('https://res.cloudinary.com/drsaojfyp/image/upload/v1541627186/Screen_Shot_2018-11-07_at_4.46.09_PM.png');
+	background-size: 120%;
+	height: 2rem;
+	width: 2rem;
+	margin-left: .6rem;
+	margin-top: .3rem;
+	margin-bottom: .2rem;
+}
+
+.commentButton {
+	background-image: url('https://res.cloudinary.com/drsaojfyp/image/upload/v1541626523/Screen_Shot_2018-11-07_at_4.25.49_PM.png');
+	background-size: contain;
+	height: 2rem;
+	width: 2rem;
+	margin-left: .6rem;
+	margin-top: .4rem;
+	margin-bottom: .2rem;
+}
+
+.messageButton {
+	background-image: url('https://res.cloudinary.com/drsaojfyp/image/upload/v1541626619/Screen_Shot_2018-11-07_at_4.25.59_PM.png');
+	background-size: contain;
+	height: 2rem;
+	width: 2rem;
+	margin-left: .6rem;
+	margin-top: .4rem;
+	margin-bottom: .2rem;
+}
+
+.profilePic {
+	width: 32.8vw;
+  	height: 16vh;
+  	border-right: .05rem white solid;
+  	border-left: .05rem white solid;
+}
+
+.profilePicGrid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap
+}
+
+.userInformationNewsfeed {
+	display: flex;
+	height: 6vh;
+	align-items: center;
+	margin-top:1rem;
+	margin-bottom: .2rem;
+}
+
+.userImg {
+	width: 9vw;
+  	height: 5vh;
+	border-radius: 2rem;
+ 	margin-right: .7rem;
+	margin-left: .5rem;
+}
+
+.usernameTop {
+	margin-right: .5rem;
+	font-family: font medium;
+	font-size: 0.9rem;
+}
+
+.likesCaptionContainer{
+	display:flex;
+	padding-top: .2rem;
+  	display: flex;
+}
+
+
+.likes {
+	text-decoration: none;
+	color: black;
+}
+
+.headofpic {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.delete {
+	background-image: url(https://res.cloudinary.com/drsaojfyp/image/upload/v1541950024/Screen_Shot_2018-11-11_at_10.26.49_AM.png);
+	background-size: contain;
+	width: 6vh;
+	height: 12vw;
+	margin-top: 1rem;
+}
