@@ -35,7 +35,7 @@ class Picture extends Component {
   }
 
   likesCounter() {
-    axios.get(`http://localhost:8080/finsta/like/${this.props.picture.id}`)
+    axios.get(`http://localhost:3001/finsta/like/${this.props.picture.id}`)
     .then((res) => {
       const data = res.data.data;
       this.setState({
