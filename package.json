@@ -4,11 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client": "cd client && react-scripts start",
-    "build": "cd client && react-scripts build",
-    "test": "cd client && react-scripts test",
-    "eject": "cd client && react-scripts eject",
     "start": "node server.js",
+    "client": "cd client && npm start",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "npm install && cd client && npm install --only-dev && npm install && npm run build"
