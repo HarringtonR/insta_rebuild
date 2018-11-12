@@ -17,7 +17,7 @@ export default class LogInPage extends Component {
  componentDidMount(){
     const auth = localStorage.getItem('username')
     if (auth){
-      window.location.replace('/Main')
+      window.location.replace('/')
     }
   }
 
@@ -41,7 +41,7 @@ export default class LogInPage extends Component {
   // the event for a form is...onSubmit
   handleFormSubmit(e){
     e.preventDefault()
-    axios.post('http://localhost:3001/finsta/userauth', {
+    axios.post('/userauth', {
        username: this.state.username,
        password: this.state.password,
     }).then(res => {
