@@ -27,8 +27,8 @@ app.listen(PORT, () => {
 const routes = require('./routes/routes');
 app.use('/finsta', routes);
 
-app.use('*', (req, res) => {
-  res.status(400).json({
-    message: 'Endpoint not found!',
-  });
-});
+// app.use('*', (req, res) => {
+//   res.status(400).json({
+//     message: 'Endpoint not found!',
+//   });
+// });
