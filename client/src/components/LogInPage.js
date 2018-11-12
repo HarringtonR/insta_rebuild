@@ -14,12 +14,12 @@ export default class LogInPage extends Component {
     fireCreateAccount: false
   }
 
- // componentDidMount(){
- //    const auth = localStorage.getItem('username')
- //    if (auth){
- //      window.location.replace('/main')
- //    }
- //  }
+ componentDidMount(){
+    const auth = localStorage.getItem('username')
+    if (auth){
+      window.location.replace('/main')
+    }
+  }
 
   handleInputChangeUsername(e){
     const value= e.target.value
@@ -41,7 +41,7 @@ export default class LogInPage extends Component {
   // the event for a form is...onSubmit
   handleFormSubmit(e){
     e.preventDefault()
-    axios.post('/userauth', {
+    axios.post('http://localhost:3001/finsta/userauth', {
        username: this.state.username,
        password: this.state.password,
     }).then(res => {
