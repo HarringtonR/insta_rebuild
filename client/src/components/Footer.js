@@ -11,8 +11,6 @@ class Footer extends Component {
 
 	handleClick(e) {
 		e.stopPropagation()
-		console.log('inside handleClick')
-
 		this.setState(prevState => ({
 			isHome: !this.state.isHome,
 			isProf: !this.state.isProf,

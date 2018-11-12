@@ -20,7 +20,6 @@ export default class comments extends Component{
     await this.setState(prevState => ({
        [name]: value
     }));
-    // console.log("this is state: ", this.state)
   }
 
   commentRefresh(){
@@ -28,8 +27,6 @@ export default class comments extends Component{
 
     axios.get(`/comments/${picture_id}`)
     .then((res) => {
-      console.log('this is res: ', res.data.data);
-      console.log('this is state: ', this.state)
       const data = res.data.data;
       this.setState({
         apiData: data,
@@ -37,13 +34,11 @@ export default class comments extends Component{
       })
     })
       .catch(err => console.log(err));
-      console.log('this is state: ', this.state)
   }
 
 
   handleFormSubmit(e){
     e.preventDefault()
-    // console.log('STATE', this.state)
     const picture_id = localStorage.getItem('picture_id')
     const user_id = localStorage.getItem('user_id')
     axios.post(`comments/${picture_id}`, {
@@ -61,7 +56,6 @@ export default class comments extends Component{
   }
 
   renderComments() {
-      console.log('this is state: ',this.state)
       if(this.state.apiDataLoaded) {
         return this.state.apiData.map(d => {
           return(
@@ -76,7 +70,6 @@ export default class comments extends Component{
   }
 
   render(){
-    console.log(this.props.location.state.data)
     return(
       <div >
         <div className="commentsList">
@@ -93,9 +86,9 @@ export default class comments extends Component{
                 value={this.state.comment}
                 onChange={(e) => this.handleInputChange(e)}
             />
-            <input 
-                type="submit" value="Post" 
-                onClick={(e) => this.handleFormSubmit(e)} 
+            <input
+                type="submit" value="Post"
+                onClick={(e) => this.handleFormSubmit(e)}
                 className='post'
             />
           </div>

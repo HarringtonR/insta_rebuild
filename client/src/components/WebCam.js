@@ -40,7 +40,7 @@ export default class WebCam extends Component {
     const user_id = localStorage.getItem('user_id')
     const image = document.querySelector('.captureImage')
     const blob = image.src
-      axios.post('/pictures', {
+      axios.post('http://localhost:3001/finsta/pictures', {
         user_id: user_id,
         img_file: blob
     })
@@ -54,7 +54,6 @@ export default class WebCam extends Component {
     return (
       <div className ='container'>
         <Camera
-          style={style.preview}
           className ='preview'
           ref={(cam) => {
             this.camera = cam;
@@ -67,20 +66,14 @@ export default class WebCam extends Component {
             </div>
             <div className ='uploadButton' onClick ={(e) => this.uploadHandler(e)}>
               <button className ='captureButton'> UPLOAD </button>
-            </div>  
-         </div> 
+            </div>
+         </div>
          <img
           className ='captureImage'
           ref={(img) => {this.img = img;}}
-        />
+        alt = 'pic'/>
       </div>
     );
   }
 }
-
-const style = {
-  preview: {
-    position: 'relative',
-  }
-};
 

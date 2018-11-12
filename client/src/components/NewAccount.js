@@ -29,7 +29,7 @@ export default class NewAccount extends Component {
   handleFormSubmit(e){
     e.preventDefault()
 
-    axios.post('/', {
+    axios.post('/finsta', {
        username: this.state.username,
        password: this.state.password,
        full_name: this.state.full_name,

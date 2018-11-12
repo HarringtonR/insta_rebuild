@@ -16,7 +16,6 @@ class Picture extends Component {
 	async handleClick(e) {
 		e.stopPropagation()
 		const user_id = localStorage.getItem('user_id')
-    	console.log('inside handleClick')
     	axios.post('/like', {
     	picture_id: this.props.picture.id,
     	user_id: user_id,
@@ -29,8 +28,6 @@ class Picture extends Component {
 
   handleCommentClick(e){
     e.stopPropagation()
-    console.log('comment click')
-
     localStorage.setItem('picture_id', this.props.picture.id)
   }
 
@@ -41,10 +38,8 @@ class Picture extends Component {
       this.setState({
         likes: data.length,
       })
-      console.log(res.data.data)
     })
       .catch(err => console.log(err));
-      // console.log('this is state: ', this.state)
   }
 
 	render () {

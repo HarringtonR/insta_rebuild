@@ -30,13 +30,13 @@ class PictureSingle extends Component {
   handleCommentClick(e){
     e.stopPropagation()
     console.log('comment click')
-
     localStorage.setItem('picture_id', this.props.picture.id)
   }
 
-  handleClick(e) {
-    e.stopPropagation()
-    console.log('inside deleteClick')
+  handleClickDelete(e) {
+  console.log(this.props.picture.id)
+    // axios.delete(`/${this.props.picture.id}`)
+
   }
 
   likesCounter() {
@@ -46,10 +46,8 @@ class PictureSingle extends Component {
       this.setState({
         likes: data.length,
       })
-      console.log(res.data.data)
     })
       .catch(err => console.log(err));
-      // console.log('this is state: ', this.state)
   }
 
 	render () {
@@ -63,7 +61,7 @@ class PictureSingle extends Component {
 						<img className='userImg' src={this.props.picture.profpic_url} alt="UserImg"/>
 						<div className="usernameTop">{this.props.picture.username}</div>
 					</div>
-					<div className='delete' onClick = {(e) => this.handleClick(e)}></div>
+					<div className='delete' onClick = {(e) => this.handleClickDelete(e)}></div>
 				</div>
 				<img className='picture' src={this.props.picture.img_url} alt="Camera" onClick = {(e) => this.handleClick(e)}/>
 				<div className='actions'>

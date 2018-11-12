@@ -74,7 +74,7 @@ logOut(e){
 
 
   render() {
-  let username = localStorage.getItem('username')
+  // let username = localStorage.getItem('username')
 
   return(
     <div className="login">

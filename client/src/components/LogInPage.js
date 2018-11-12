@@ -14,15 +14,12 @@ export default class LogInPage extends Component {
     fireCreateAccount: false
   }
 
-  // Do Not delete.  This is our eventual auto refresh login.
-
-  componentDidMount(){
+ componentDidMount(){
     const auth = localStorage.getItem('username')
     if (auth){
       window.location.replace('/Main')
     }
   }
-
 
   handleInputChangeUsername(e){
     const value= e.target.value
@@ -44,7 +41,7 @@ export default class LogInPage extends Component {
   // the event for a form is...onSubmit
   handleFormSubmit(e){
     e.preventDefault()
-    axios.post('/userauth', {
+    axios.post('http://localhost:3001/finsta/userauth', {
        username: this.state.username,
        password: this.state.password,
     }).then(res => {
@@ -102,7 +99,7 @@ export default class LogInPage extends Component {
                  <span><p> Incorrect Username</p></span>
                  <p>The username you entered doesn't appear to belong to an account. Please check your username and try again.</p>
                  <br></br>
-                  <Link to='/LogInPage' className ='tryAgain' onClick = 'window.location.reload()'> Try Again </Link>
+                  <Link to='/' className ='tryAgain' onClick = 'window.location.reload()'> Try Again </Link>
              </div>
            </div>
           : ''}

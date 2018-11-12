@@ -11,7 +11,7 @@ class ProfilePage extends Component {
   }
 
   componentDidMount() {
-      axios.get(`/${this.props.match.params.id}`)
+      axios.get(`http://localhost:3001/finsta/${this.props.match.params.id}`)
       .then( res => {
         this.setState(prevState => ({
           apiDataLoaded: true,
@@ -25,8 +25,6 @@ class ProfilePage extends Component {
 
   handleClick(e) {
     e.stopPropagation()
-    console.log('inside handleClick')
-
     this.setState(prevState => ({
       isGrid: !this.state.isGrid,
       isSingle: !this.state.isSingle,
@@ -35,9 +33,9 @@ class ProfilePage extends Component {
 
   renderPictures() {
     if(this.state.apiDataLoaded) {
-      return this.state.apiData.map(d => {
+      return this.state.apiData.map((d, i)=> {
         return(
-          <ProfilePicture key={d.id} picture={d} />
+          <ProfilePicture key={i} picture={d} />
         )
       })
     } else return <p>Loading...</p>
@@ -57,15 +55,12 @@ class ProfilePage extends Component {
 
   renderUserBio() {
       if(this.state.apiDataLoaded) {
-        console.log(this.state.apiData[0].bio)
         return this.state.apiData[0].bio
       } else return <p>Loading...</p>
     }
 
   render () {
-
   let username = localStorage.getItem('username')
-
     return (
       <div className="newsFeed">
         <div className="scroll">

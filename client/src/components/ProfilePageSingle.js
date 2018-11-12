@@ -11,13 +11,12 @@ class ProfilePageSingle extends Component {
   }
 
 	componentDidMount() {
-	    axios.get(`/${this.props.match.params.id}`)
+	    axios.get(`http://localhost:3001/finsta/${this.props.match.params.id}`)
      	.then( res => {
         this.setState(prevState => ({
           apiDataLoaded: true,
           apiData: res.data.data
         }))
-        console.log(res.data.data)
       })
       this.targetElement = document.querySelector('.scroll')
       disableBodyScroll(this.targetElement)
@@ -25,8 +24,6 @@ class ProfilePageSingle extends Component {
 
   handleClick(e) {
     e.stopPropagation()
-    console.log('inside handleClick')
-
     this.setState(prevState => ({
       isGrid: !this.state.isGrid,
       isSingle: !this.state.isSingle,
@@ -57,7 +54,6 @@ class ProfilePageSingle extends Component {
 
   renderUserBio() {
       if(this.state.apiDataLoaded) {
-        console.log(this.state.apiData[0].bio)
         return this.state.apiData[0].bio
       } else return <p>Loading...</p>
     }
@@ -69,21 +65,21 @@ class ProfilePageSingle extends Component {
 		return (
 			<div className="newsFeed">
         <div className="scroll">
-          <div className='top'>  
+          <div className='top'>
               <div className='profHead'>
                   <img className='userImgProfPage' src={this.renderUserImg()} alt="UserImg"/>
                   <Link to = {`/editprofile/${username}`} className='edit'><div className='editThis'> Edit Profile </div></Link>
-              </div>    
+              </div>
             <div className='name'>{this.renderUserName()}</div>
             <div className='bio'>{this.renderUserBio()}</div>
           </div>
           <div className='viewBar'>
-            <Link to={`/profilepage/${username}`} 
+            <Link to={`/profilepage/${username}`}
               onClick = {(e) => this.handleClick(e)}
               className='gridPicNotUsed'/>
             <div className='singlePicinUse'></div>
             <div className='tagPic'></div>
-          </div>  
+          </div>
           <div className='profilePicGrid'>{this.renderPictures()}</div>
          </div>
 			</div>

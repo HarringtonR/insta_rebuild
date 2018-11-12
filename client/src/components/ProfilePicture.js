@@ -7,16 +7,13 @@ class ProfilePicture extends Component {
 
 	handleClick(e) {
 		e.stopPropagation()
-		console.log('inside handleClick')
-
 		this.setState(prevState => ({
 			isLike: !prevState.isLike
 		}))
 	}
 
 	render () {
-		const isLike = (this.state.isLike) ? 'liked' : 'noLike' 
-		console.log('hi')
+		// const isLike = (this.state.isLike) ? 'liked' : 'noLike'
 		return (
 
 			<div>
