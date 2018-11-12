@@ -17,7 +17,7 @@ export default class LogInPage extends Component {
  componentDidMount(){
     const auth = localStorage.getItem('username')
     if (auth){
-      window.location.replace('/')
+      window.location.replace('/main')
     }
   }
 
