@@ -16,7 +16,7 @@ class Picture extends Component {
 	async handleClick(e) {
 		e.stopPropagation()
 		const user_id = localStorage.getItem('user_id')
-    	axios.post('finsta/like', {
+    	axios.post('/like', {
     	picture_id: this.props.picture.id,
     	user_id: user_id,
     })
@@ -32,7 +32,7 @@ class Picture extends Component {
   }
 
   likesCounter() {
-    axios.get(`http://localhost:3001/finsta/like/${this.props.picture.id}`)
+    axios.get(`/like/${this.props.picture.id}`)
     .then((res) => {
       const data = res.data.data;
       this.setState({

@@ -11,7 +11,7 @@ class ProfilePage extends Component {
   }
 
   componentDidMount() {
-      axios.get(`http://localhost:3001/finsta/${this.props.match.params.id}`)
+      axios.get(`/${this.props.match.params.id}`)
       .then( res => {
         this.setState(prevState => ({
           apiDataLoaded: true,

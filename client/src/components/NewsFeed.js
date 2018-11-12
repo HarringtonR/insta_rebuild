@@ -11,7 +11,7 @@ class NewsFeed extends Component {
 	  }
 
 	componentDidMount() {
-  	axios.get('/finsta/newsFeed')
+  	axios.get('/newsFeed')
    	.then( res => {
       this.setState(prevState => ({
         apiDataLoaded: true,

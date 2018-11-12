@@ -25,7 +25,7 @@ app.listen(PORT, () => {
 // });
 
 const routes = require('./routes/routes');
-app.use('/finsta', routes);
+app.use('/', routes);
 
 app.use('*', (req, res) => {
   res.status(400).json({
