@@ -14,12 +14,12 @@ export default class LogInPage extends Component {
     fireCreateAccount: false
   }
 
- componentDidMount(){
-    const auth = localStorage.getItem('username')
-    if (auth){
-      window.location.replace('/Main')
-    }
-  }
+ // componentDidMount(){
+ //    const auth = localStorage.getItem('username')
+ //    if (auth){
+ //      window.location.replace('/Main')
+ //    }
+ //  }
 
   handleInputChangeUsername(e){
     const value= e.target.value
