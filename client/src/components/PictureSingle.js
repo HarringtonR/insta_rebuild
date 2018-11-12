@@ -18,7 +18,7 @@ class PictureSingle extends Component {
 		const user_id = localStorage.getItem('user_id')
     	console.log('inside handleClick')
     	axios.post('/like', {
-    	picture_id: this.props.picture.id,
+    	picture_id: this.props.picture.pic_id,
     	user_id: user_id,
     })
 		this.setState(prevState => ({
@@ -33,14 +33,15 @@ class PictureSingle extends Component {
     localStorage.setItem('picture_id', this.props.picture.id)
   }
 
-  handleClickDelete(e) {
-  console.log(this.props.picture.id)
-    // axios.delete(`/${this.props.picture.id}`)
-
+ handleClickDelete(e) {
+    e.stopPropagation()
+    // console.log('inside deleteClick')
+    console.log('this.props.picture:', this.props.picture);
+    axios.delete(`/${this.props.picture.pic_id}`)
   }
 
   likesCounter() {
-    axios.get(`finsta/like/${this.props.picture.id}`)
+    axios.get(`/like/${this.props.picture.pic_id}`)
     .then((res) => {
       const data = res.data.data;
       this.setState({

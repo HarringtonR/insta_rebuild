@@ -177,7 +177,6 @@ controller.numberLikes = (req, res) => {
 
 controller.destroy = (req, res) => {
   Model.destroy(req.params.id)
-    Model.findById(req.params.id)
     .then(model => {
       res.json({
         message: 'Model deleted successfully!',
