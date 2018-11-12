@@ -20,9 +20,9 @@ app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
 
-app.get('/', (req, res) => {
-  res.send('hello world');
-});
+// app.get('/', (req, res) => {
+//   res.send('hello world');
+// });
 
 const routes = require('./routes/routes');
 app.use('/finsta', routes);
