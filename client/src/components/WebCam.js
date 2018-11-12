@@ -40,9 +40,9 @@ export default class WebCam extends Component {
     const user_id = localStorage.getItem('user_id')
     const image = document.querySelector('.captureImage')
     const blob = image.src
-      axios.post('http://localhost:3001/finsta/pictures', {
+      axios.post('/pictures', {
         user_id: user_id,
-        img_file: blob
+        img_url: blob
     })
     // window.location.replace('/newsfeed')
   }
