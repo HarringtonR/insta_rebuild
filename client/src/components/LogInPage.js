@@ -41,7 +41,7 @@ export default class LogInPage extends Component {
   // the event for a form is...onSubmit
   handleFormSubmit(e){
     e.preventDefault()
-    axios.post('/userauth', {
+    axios.post('/finsta/userauth', {
        username: this.state.username,
        password: this.state.password,
     }).then(res => {

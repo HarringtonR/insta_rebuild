@@ -18,7 +18,7 @@ class AddPhoto extends Component {
 
  uploadHandler(){
   const user_id = localStorage.getItem('user_id')
-      axios.post('/pictures', {
+      axios.post('http://localhost:3001/finsta/pictures', {
         user_id: user_id,
         img_url: this.state.img_url
       })
