@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 
 class PictureSingle extends Component {
 	state = {
 		isLike: false,
-    	likes:''
+     likes:'',
+     fireRedirect: false
 	}
 
   componentDidMount(){
@@ -38,6 +39,11 @@ class PictureSingle extends Component {
     // console.log('inside deleteClick')
     console.log('this.props.picture:', this.props.picture);
     axios.delete(`/${this.props.picture.pic_id}`)
+    .then(res => {
+        this.setState(prevState => ({
+          fireRedirect:true
+        }))
+      }).catch(error => {console.log(error)})
   }
 
   likesCounter() {
@@ -88,6 +94,9 @@ class PictureSingle extends Component {
   						<div><span className='this'>{this.props.picture.username}</span> {this.props.picture.caption}</div>
           			</div>
 				</div>
+        {this.state.fireRedirect
+          ? <Redirect push to='/newsfeed' />
+          : ''}
 			</div>
 		)
 	}
