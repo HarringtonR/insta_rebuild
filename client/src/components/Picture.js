@@ -16,7 +16,7 @@ class Picture extends Component {
 	async handleClick(e) {
 		e.stopPropagation()
 		const user_id = localStorage.getItem('user_id')
-    	axios.post('/like', {
+    	axios.post('finsta/like', {
     	picture_id: this.props.picture.id,
     	user_id: user_id,
     })
